@@ -1,0 +1,17 @@
+def breakingRecords(scores):
+    # Write your code here
+    dic={}
+    dic["max"]=scores[0]
+    dic["min"]=scores[0]
+    uppercount=0
+    lowercount=0
+    for i in scores:
+        if dic["max"]<i:
+            uppercount+=1
+            dic["max"]=i
+        if dic["min"]>i:
+            lowercount+=1
+            dic["min"]=i
+    return [uppercount,lowercount]
+    #the number of times you break the record for most points and least points
+    #(scores) is an array of int indicating your scores
